@@ -33,6 +33,7 @@ class ResultDialog extends StatelessWidget {
             Divider(),
             _buildTile(result.areaWithoutFooter, kAreaWithoutFooter),
             _buildTile(result.areaWithFooter, kAreaWithFooter),
+            _buildTile(result.price, kTotalPrice),
           ],
         ),
       ),

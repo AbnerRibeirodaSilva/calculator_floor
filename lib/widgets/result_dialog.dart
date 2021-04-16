@@ -17,12 +17,13 @@ class ResultDialog extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            _buildTile(24.0, kAmountFloor),
-            _buildTile(10.0, kAmountFloorToFooter),
-            _buildTile(34.0, kTotalFloor),
+            _buildTile(0.0, kAmountFloor),
+            _buildTile(0.0, kAmountFloorToFooter),
+            _buildTile(0.0, kTotalFloor),
             Divider(),
-            _buildTile(8.64, kAreaWithoutFooter),
-            _buildTile(12.24, kAreaWithFooter),
+            _buildTile(0.0, kAreaWithoutFooter),
+            _buildTile(0.0, kAreaWithFooter),
+            _buildTile(0.0, kTotalPrice),
           ],
         ),
       ),

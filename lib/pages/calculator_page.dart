@@ -6,10 +6,6 @@ import '../widgets/primary_button.dart';
 import 'result_dialog.dart';
 import '../widgets/text_header.dart';
 
-import '../models/floor_model.dart';
-import '../models/result_model.dart';
-import '../models/room_model.dart';
-
 class CalculatorPage extends StatefulWidget {
   @override
   _CalculatorPageState createState() => _CalculatorPageState();
@@ -18,14 +14,13 @@ class CalculatorPage extends StatefulWidget {
 class _CalculatorPageState extends State<CalculatorPage> {
   final _controller = CalculatorController();
   final _formKey = GlobalKey<FormState>();
-  final RoomModel _room = RoomModel();
-  final FloorModel _floor = FloorModel();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(kAppTitle),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -65,14 +60,28 @@ class _CalculatorPageState extends State<CalculatorPage> {
             label: '$kLength ($kMeters)',
             onSaved: _controller.setFloorLength,
           ),
+          SizedBox(height: kSpace),
+          NumberInputField(
+            label: '$kPrice $kSquaremeters',
+            onSaved: _controller.setPrice,
+          ),
           SizedBox(height: kBigSpace),
           PrimaryButton(
             label: kCalculateButton,
             onPressed: _onCalculate,
           ),
+          SizedBox(height: kSmallSpace),
+          PrimaryButton(
+            label: kClearFields,
+            onPressed: _clearFields,
+          ),
         ],
       ),
     );
+  }
+
+  void _clearFields() {
+    _formKey.currentState.reset();
   }
 
   void _onCalculate() {

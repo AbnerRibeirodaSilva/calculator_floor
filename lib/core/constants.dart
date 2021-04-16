@@ -6,6 +6,9 @@ const kWidth = 'Largura';
 const kLength = 'Comprimento';
 const kMeters = 'metros';
 const kCalculateButton = 'Calcular';
+const kPrice = 'Preço';
+const kSquaremeters = 'do piso por metro quadrados';
+const kClearFields = 'limpar campos';
 
 const kResult = 'Resultado';
 const kAmountFloor = 'Quantidade de pisos';
@@ -13,6 +16,7 @@ const kAmountFloorToFooter = 'Quantidade de pisos para rodapé';
 const kTotalFloor = 'Quantidade total de pisos';
 const kAreaWithoutFooter = 'Metragem quadrada sem rodapé';
 const kAreaWithFooter = 'Metragem quadrada com rodapé';
+const kTotalPrice = 'Preço total gasto';
 
 const kOpacityHeader = 0.1;
 const kDecimalPrecision = 2;

@@ -1,5 +1,5 @@
+import 'package:calculator_pisos/models/price_model.dart';
 import '../helpers/parse_helper.dart';
-
 import '../models/floor_model.dart';
 import '../models/result_model.dart';
 import '../models/room_model.dart';
@@ -7,6 +7,7 @@ import '../models/room_model.dart';
 class CalculatorController {
   final RoomModel _room = RoomModel();
   final FloorModel _floor = FloorModel();
+  final PriceModel _price = PriceModel();
 
   void setRoomWidth(String value) {
     _room.width = ParseHelper.toDouble(value);
@@ -24,11 +25,16 @@ class CalculatorController {
     _floor.length = ParseHelper.toDouble(value);
   }
 
+  void setPrice(String value) {
+    _price.price = ParseHelper.toDouble(value);
+  }
+
   ResultModel calculate() {
     return ResultModel(
       piecesByWidth: (_room.width / _floor.width).ceil(),
       piecesByLength: (_room.length / _floor.length).ceil(),
-      areaFloor: _floor.width * _floor.width,
+      areaFloor: _floor.width * _floor.length,
+      totalPrice: _price.price,
     );
   }
 }
