@@ -7,7 +7,7 @@ const kLength = 'Comprimento';
 const kMeters = 'metros';
 const kCalculateButton = 'Calcular';
 const kPrice = 'Preço';
-const kSquaremeters = 'do piso por metro quadrados';
+const kSquaremeters = 'do piso por metros quadrados';
 const kClearFields = 'limpar campos';
 
 const kResult = 'Resultado';
@@ -18,7 +18,7 @@ const kAreaWithoutFooter = 'Metragem quadrada sem rodapé';
 const kAreaWithFooter = 'Metragem quadrada com rodapé';
 const kTotalPrice = 'Preço total gasto';
 
-const kOpacityHeader = 0.1;
+const kOpacityHeader = 0.2;
 const kDecimalPrecision = 2;
 
 const kSmallSpace = 10.0;

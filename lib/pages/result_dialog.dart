@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:calculator_pisos/models/result_model.dart';
-
 import '../core/constants.dart';
 
 class ResultDialog extends StatelessWidget {

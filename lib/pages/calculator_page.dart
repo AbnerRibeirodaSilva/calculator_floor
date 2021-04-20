@@ -48,7 +48,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
             label: '$kLength ($kMeters)',
             onSaved: _controller.setRoomLength,
           ),
-          SizedBox(height: kBigSpace),
+          SizedBox(height: kSpace),
           TextHeader(label: kFloorHeader, opacity: kOpacityHeader),
           SizedBox(height: kSpace),
           NumberInputField(
@@ -65,7 +65,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
             label: '$kPrice $kSquaremeters',
             onSaved: _controller.setPrice,
           ),
-          SizedBox(height: kBigSpace),
+          SizedBox(height: kSpace),
           PrimaryButton(
             label: kCalculateButton,
             onPressed: _onCalculate,

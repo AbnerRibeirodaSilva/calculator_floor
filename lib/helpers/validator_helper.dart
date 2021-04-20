@@ -5,7 +5,10 @@ class ValidatorHelper {
   static String fieldIsNotValid(String text) {
     if (text.isEmpty) {
       return kRequiredField;
-    } else if (text.length > 0 && text == '0') {
+    }
+    double x = double.parse(text);
+
+    if (x * 1 == 0) {
       return kIvalideFileld;
     }
   }
